@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import './AddIngredients.css';
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { addNewIngredient } from "../../store/ingredients.slice";
@@ -42,14 +43,14 @@ const AddIngredients = () => {
 
     return (
         <div>
-            <form onSubmit={submit}>
-                <input type={'text'} onChange={inputHandler} name={'name'} placeholder={'name'} required/>
-                <input type={'number'} onChange={inputHandler} name={'price'} placeholder={'price'} required/>
+            <form onSubmit={submit} className={'addIngSubmit'}>
+                <input type={'text'} onChange={inputHandler} name={'name'} placeholder={'name*'} required/>
+                <input type={'number'} onChange={inputHandler} name={'price'} placeholder={'price*'} required/>
                 <div>
-                    <input type={'text'} onChange={inputStyleHandler} name={'width'} placeholder={'Width'}/>
-                    <input type={'text'} onChange={inputStyleHandler} name={'height'} placeholder={'Height'}/>
+                    <input type={'text'} onChange={inputStyleHandler} name={'width'} placeholder={'Width*'} required/>
+                    <input type={'text'} onChange={inputStyleHandler} name={'height'} placeholder={'Height*'} required/>
                     <input type={'text'} onChange={inputStyleHandler} name={'margin'} placeholder={'Margin'}/>
-                    <input type={'text'} onChange={inputStyleHandler} name={'background'} placeholder={'Background'}/>
+                    <input type={'text'} onChange={inputStyleHandler} name={'background'} placeholder={'Background*'} required/>
                     <input type={'text'} onChange={inputStyleHandler} name={'border-radius'} placeholder={'Border-radius'}/>
                 </div>
                 <button>Add</button>

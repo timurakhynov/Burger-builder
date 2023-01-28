@@ -1,0 +1,50 @@
+.addIngSubmit {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 50px;
+    margin: 5% 3% 0;
+    border-radius: 10px;
+    background-color: #CF8F2E;
+}
+
+.addIngSubmit > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.addIngSubmit > input, .addIngSubmit > div > input {
+    margin: 5px 0;
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.addIngSubmit > button {
+    background-color: #dad735;
+    outline: none;
+    cursor: pointer;
+    border: 1px solid #966909;
+    color: #966909;
+    font-family: inherit;
+    font-size: 1.2em;
+    padding: 15px 30px;
+    box-shadow: 2px 2px 2px #966909;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.addIngSubmit > button:hover, .addIngSubmit > button:active {
+    background-color: #a0db41;
+    border: 1px solid #966909;
+    color: #966909;
+}
+.addIngSubmit > button:disabled {
+    background-color: #c7c6c6;
+    cursor: not-allowed;
+    border: 1px solid #ccc;
+    color: #888888;
+}
+
+.addIngSubmit > button:not(:disabled) {
+    animation: enable 0.3s linear;
+}
