@@ -1,0 +1,1 @@
+﻿export const burgerApiUrl = 'https://burger-project-88d73-default-rtdb.firebaseio.com/'
